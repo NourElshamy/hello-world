@@ -1,0 +1,306 @@
+Nour@LAPTOP-O0VBC431 MINGW64 ~
+$ cd d:
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d
+$ git clone https://github.com/NourElshamy/hello-world.git
+Cloning into 'hello-world'...
+remote: Counting objects: 12, done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 12 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (12/12), done.
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d
+$ touch AllMyCommands.txt
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d
+$ >git init
+bash: init: command not found
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d
+$ git init
+Initialized empty Git repository in D:/.git/
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add file 1.txt
+fatal: pathspec 'file' did not match any files
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add NourElshamy-patch-1.txt
+fatal: pathspec 'NourElshamy-patch-1.txt' did not match any files
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add first.txt
+fatal: pathspec 'first.txt' did not match any files
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add hello-world/first.txt
+fatal: pathspec 'hello-world/first.txt' did not match any files
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ touch file1.txt
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ touch file2.txt
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ touch file3.txt
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add file1.txt
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add file2.txt
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add file3.txt
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$  git rm file2.txt
+error: the following file has changes staged in the index:
+    file2.txt
+(use --cached to keep the file, or -f to force removal)
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git rm-f file2.txt
+git: 'rm-f' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote-fd
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git rm -f file2.txt
+rm 'file2.txt'
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git checkout file2.txt
+error: pathspec 'file2.txt' did not match any file(s) known to git.
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git reset file2.txt
+fatal: ambiguous argument 'file2.txt': unknown revision or path not in the worng tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git checkout
+fatal: You are on a branch yet to be born
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git checkout file2.txt
+error: pathspec 'file2.txt' did not match any file(s) known to git.
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git checkout
+fatal: You are on a branch yet to be born
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add file2.txt
+fatal: pathspec 'file2.txt' did not match any files
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add file.txt
+fatal: pathspec 'file.txt' did not match any files
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add file.txt
+fatal: pathspec 'file.txt' did not match any files
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add file2.txt
+fatal: pathspec 'file2.txt' did not match any files
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add file2.txt
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git commit -m "deleted"
+[master (root-commit) c247d81] deleted
+ 3 files changed, 187 insertions(+)
+ create mode 100644 file1.txt
+ create mode 100644 file2.txt
+ create mode 100644 file3.txt
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add ^C
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add remote  https://github.com/NourElshamy/hello-world.git
+fatal: pathspec 'remote' did not match any files
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git remote add  https://github.com/NourElshamy/hello-world.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository ing
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push  https://github.com/NourElshamy/hello-world.git
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream https://github.com/NourElshamy/hello-world.git masr
+
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ ^C
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push ^C
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push https://github.com/NourElshamy/hello-world.git
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream https://github.com/NourElshamy/hello-world.git masr
+
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push  https://github.com/NourElshamy/hello-world.git master
+fatal: unable to access 'https://github.com/NourElshamy/hello-world.git/': Cou not resolve host: github.com
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push git master
+fatal: Invalid gitfile format: git
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push -u origin master
+
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ $ git commit -m "deleted"
+bash: $: command not found
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git commit -m "updated"
+On branch master
+Untracked files:
+        $RECYCLE.BIN/
+        AllMyCommands.txt
+        git
+        hello-world/
+
+nothing added to commit but untracked files present
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ ^C
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git remote add  https://github.com/NourElshamy/hello-world.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ touch README.md
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git add README.md
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git commit -m "updated"
+[master 23c4cd4] updated
+ 1 file changed, 7 insertions(+)
+ create mode 100644 README.md
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git branch ReadMe
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (master)
+$ git checkout ReadMe
+Switched to branch 'ReadMe'
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (ReadMe)
+$ git add README.md
+
+Nour@LAPTOP-O0VBC431 MINGW64 /d (ReadMe)
+$ git commit -m "added"
+
